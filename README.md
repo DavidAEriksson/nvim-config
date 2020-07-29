@@ -23,3 +23,40 @@ sudo apt install neovim
 ```
 sudo apt install neovim
 ```
+
+### Clone this repository 
+
+git clone https://github.com/DavidAEriksson/nvim-config.git ~/.config/nvim
+
+### Install libraries
+
+- Node
+
+```
+npm i -g neovim
+```
+
+- Python
+
+```
+pip install pynvim
+```
+
+- Neovim Remote
+
+```
+pip install neovim-remote
+```
+### Install vim-plug libraries
+
+Firstly, launch Neovim
+
+```
+nvim
+```
+
+Then install using PlugInstall
+
+```
+PlugInstall
+```
