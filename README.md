@@ -26,6 +26,7 @@ sudo apt install neovim
 
 ### Clone this repository 
 
+This will clone the repository directly into your ```nvim config``` folder
 ```
 git clone https://github.com/DavidAEriksson/nvim-config.git ~/.config/nvim
 ```
