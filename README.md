@@ -1,6 +1,6 @@
 # Neovim Config
 
-This is my *smaller* version of Christian Chiarulli's Neovim configuration where he uses a more sane approach to the traditional ```vimrc``` approach using the ```init.vim``` file to source plugins.
+This is my *smaller* version of Christian Chiarulli's Neovim configuration where he uses a more sane approach to the traditional ```vimrc``` using the ```init.vim``` file to source plugins.
 
 Link to Christian: https://github.com/ChristianChiarulli/nvim
 
