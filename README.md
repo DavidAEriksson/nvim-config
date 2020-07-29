@@ -1,3 +1,5 @@
 # Neovim Config
 
-To install 
+## Installation
+
+### Prerequisites
