@@ -1,1 +1,3 @@
-# My Personal Neovim Config
+# Neovim Config
+
+To install 
