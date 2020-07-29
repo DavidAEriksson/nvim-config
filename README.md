@@ -24,6 +24,12 @@ sudo apt install neovim
 sudo apt install neovim
 ```
 
+- Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
+
+```
+mkdir ~/.config/nvim
+```
+
 ### Clone this repository 
 
 This will clone the repository directly into your ```nvim config``` folder
