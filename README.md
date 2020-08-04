@@ -28,7 +28,7 @@ sudo apt install neovim
 sudo apt install neovim
 ```
 
-- Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
+### Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
 
 ```
 mkdir ~/.config/nvim
