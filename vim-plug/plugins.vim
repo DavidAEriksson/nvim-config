@@ -1,4 +1,4 @@
-" auto-install vim-plug
+"auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -29,4 +29,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'arcticicestudio/nord-vim'
     " Bracket guidelines
     Plug 'thaerkh/vim-indentguides'
+    " Bracey(css/html/js live update)
+    Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & npm install'}
+    Plug 'ap/vim-css-color'
+    Plug 'JulesWang/css.vim'
+    Plug 'cakebaker/scss-syntax.vim'
+    Plug 'gcorne/vim-sass-lint'
+
 call plug#end()
