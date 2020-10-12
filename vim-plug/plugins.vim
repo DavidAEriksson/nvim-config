@@ -29,12 +29,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'arcticicestudio/nord-vim'
     " Bracket guidelines
     Plug 'thaerkh/vim-indentguides'
-    " Bracey(css/html/js live update)
-    Plug 'plasticboy/vim-markdown'
-    Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & npm install'}
+    " Color code highlighting for CSS
     Plug 'ap/vim-css-color'
+    " CSS syntac
     Plug 'JulesWang/css.vim'
+    " Sass syntax
     Plug 'cakebaker/scss-syntax.vim'
+    " Sass linter
     Plug 'gcorne/vim-sass-lint'
-
+    " React snippets
+    Plug 'epilande/vim-react-snippets'
+    " React-native snippets
+    Plug 'tellijo/vim-react-native-snippets'
 call plug#end()
