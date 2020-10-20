@@ -50,4 +50,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'leafgarland/typescript-vim'    
     " Gitgutter
     Plug 'airblade/vim-gitgutter'
+    " NERDTree GIT
+    Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()
