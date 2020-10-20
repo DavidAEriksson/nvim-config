@@ -12,10 +12,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " File Explorer
     Plug 'scrooloose/NERDTree'
+    " NERD Commenter
+    Plug 'scrooloose/nerdcommenter'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Onedark Theme
-    Plug 'joshdick/onedark.vim'
+    " Plug 'joshdick/onedark.vim'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline 
@@ -26,8 +28,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Devicons
     Plug 'ryanoasis/vim-devicons'    
     " Nord
-    Plug 'arcticicestudio/nord-vim'
+    " Plug 'arcticicestudio/nord-vim'
     " Bracket guidelines
+    " Gruvbox theme
+    Plug 'morhetz/gruvbox'
+    "Indentation 'dots'
     Plug 'thaerkh/vim-indentguides'
     " Color code highlighting for CSS
     Plug 'ap/vim-css-color'
@@ -41,4 +46,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'epilande/vim-react-snippets'
     " React-native snippets
     Plug 'tellijo/vim-react-native-snippets'
+    " TypeScript syntax
+    Plug 'leafgarland/typescript-vim'    
+    " Gitgutter
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
