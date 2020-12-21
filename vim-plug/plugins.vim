@@ -31,7 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'arcticicestudio/nord-vim'
     " Bracket guidelines
     " Gruvbox theme
-    Plug 'morhetz/gruvbox'
+    " Plug 'morhetz/gruvbox'
+    Plug 'ayu-theme/ayu-vim'
     "Indentation 'dots'
     Plug 'thaerkh/vim-indentguides'
     " Color code highlighting for CSS
@@ -46,10 +47,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'epilande/vim-react-snippets'
     " React-native snippets
     Plug 'tellijo/vim-react-native-snippets'
-    " TypeScript syntax
-    Plug 'leafgarland/typescript-vim'    
     " Gitgutter
     Plug 'airblade/vim-gitgutter'
     " NERDTree GIT
     Plug 'xuyuanp/nerdtree-git-plugin'
+    " Emmet
+    Plug 'mattn/emmet-vim'
 call plug#end()
