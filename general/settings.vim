@@ -40,6 +40,14 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
+" CoC
+:nnoremap <leader>e :CocCommand explorer<CR>
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+
+
+
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
@@ -81,6 +89,4 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 " You can't stop me
 cmap w!! w !sudo tee % 
-
-
 

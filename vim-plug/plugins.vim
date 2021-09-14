@@ -36,14 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Indentation 'dots'
     Plug 'thaerkh/vim-indentguides'
     " Color code highlighting for CSS
-    Plug 'ap/vim-css-color'
-    " CSS syntac
-    Plug 'JulesWang/css.vim'
-    " Sass syntax
-    Plug 'cakebaker/scss-syntax.vim'
-    " Sass linter
-    Plug 'gcorne/vim-sass-lint'
-    " React snippets
+   " React snippets
     Plug 'epilande/vim-react-snippets'
     " React-native snippets
     Plug 'tellijo/vim-react-native-snippets'
@@ -53,4 +46,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'xuyuanp/nerdtree-git-plugin'
     " Emmet
     Plug 'mattn/emmet-vim'
+    " FZF
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()

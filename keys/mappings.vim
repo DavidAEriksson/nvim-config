@@ -42,3 +42,11 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da"
+
+
+" FZF
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <S-f> :GFiles<CR>
+
+" CoC Format on C-p
+nnoremap <C-p> :Prettier<CR> 

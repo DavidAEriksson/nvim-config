@@ -8,7 +8,10 @@
     "yaml",
     "json",
     "python",
-    "scss"
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "csharp"
   ],
   "tsserver.npm": "/usr/local/bin/npm",
   // python config
