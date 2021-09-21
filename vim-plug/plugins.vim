@@ -49,5 +49,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-
+    
+    " Omnisharp
+    Plug 'omnisharp/omnisharp-vim'
+    
+    " Vim Rooter
+    Plug 'airblade/vim-rooter'
 call plug#end()

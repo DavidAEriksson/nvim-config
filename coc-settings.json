@@ -11,7 +11,7 @@
     "scss",
     "typescript",
     "typescriptreact",
-    "csharp"
+    "cs"
   ],
   "tsserver.npm": "/usr/local/bin/npm",
   // python config
