@@ -7,24 +7,17 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
     " NERD Commenter
     Plug 'scrooloose/nerdcommenter'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    " Onedark Theme
-    " Plug 'joshdick/onedark.vim'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Ranger
-    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " Devicons
     Plug 'ryanoasis/vim-devicons'    
     " Nord
@@ -32,7 +25,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Bracket guidelines
     " Gruvbox theme
     " Plug 'morhetz/gruvbox'
-    " Plug 'ayu-theme/ayu-vim'
     "Indentation 'dots'
     Plug 'thaerkh/vim-indentguides'
     " Color code highlighting for CSS
@@ -49,10 +41,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    
     " Omnisharp
     Plug 'omnisharp/omnisharp-vim'
-    
     " Vim Rooter
     Plug 'airblade/vim-rooter'
 call plug#end()

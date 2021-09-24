@@ -7,7 +7,6 @@ nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
-
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -43,10 +42,13 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da"
 
-
 " FZF
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <S-f> :GFiles<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+
+" RipGrep
+nnoremap <leader>r :Rg <CR>
 
 " CoC Format on C-p
 nnoremap <C-p> :Prettier<CR> 
