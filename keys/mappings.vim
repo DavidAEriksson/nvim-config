@@ -3,8 +3,7 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-j>    :resize -2<CR> nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 " I hate escape more than anything else
@@ -48,7 +47,18 @@ nnoremap <silent> <S-f> :GFiles<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 
 " RipGrep
-nnoremap <leader>r :Rg <CR>
+nnoremap <leader>r :Rg<CR>
 
 " CoC Format on C-p
 nnoremap <C-p> :Prettier<CR> 
+
+" BEHAVE LIKE THE REST OF <C-u>
+nnoremap Y y$
+
+" ZZ TOP
+nnoremap n nzzzv
+nnoremap N nzzzv
+nnoremap J mzJ`z
+
+
+
