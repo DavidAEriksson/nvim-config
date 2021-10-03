@@ -21,10 +21,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Devicons
     Plug 'ryanoasis/vim-devicons'    
     " Nord
-    Plug 'arcticicestudio/nord-vim'
+    " Plug 'arcticicestudio/nord-vim'
     " Bracket guidelines
     " Gruvbox theme
-    " Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
     "Indentation 'dots'
     Plug 'thaerkh/vim-indentguides'
     " Color code highlighting for CSS
@@ -45,4 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'omnisharp/omnisharp-vim'
     " Vim Rooter
     Plug 'airblade/vim-rooter'
+    " NVIM LSP
+    Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
