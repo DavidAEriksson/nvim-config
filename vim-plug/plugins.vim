@@ -7,45 +7,45 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " NERD Commenter
-    Plug 'scrooloose/nerdcommenter'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    " Stable version of coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Airline 
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    " Devicons
-    Plug 'ryanoasis/vim-devicons'    
-    " Nord
-    " Plug 'arcticicestudio/nord-vim'
-    " Bracket guidelines
-    " Gruvbox theme
-    Plug 'morhetz/gruvbox'
-    "Indentation 'dots'
-    Plug 'thaerkh/vim-indentguides'
-    " Color code highlighting for CSS
-   " React snippets
-    Plug 'epilande/vim-react-snippets'
-    " React-native snippets
-    Plug 'tellijo/vim-react-native-snippets'
-    " Gitgutter
-    Plug 'airblade/vim-gitgutter'
-    " NERDTree GIT
-    Plug 'xuyuanp/nerdtree-git-plugin'
-    " Emmet
-    Plug 'mattn/emmet-vim'
-    " FZF
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    " Omnisharp
-    Plug 'omnisharp/omnisharp-vim'
-    " Vim Rooter
-    Plug 'airblade/vim-rooter'
-    " NVIM LSP
-    Plug 'neovim/nvim-lspconfig'
-
+    Plug 'github/copilot.vim'                                       " Copilot
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'sheerun/vim-polyglot'                                     " Better Syntax Support
+    Plug 'jiangmiao/auto-pairs'                                     " Auto pairs for '(' '[' '{'
+    Plug 'vim-airline/vim-airline'                                  " Airline 
+    Plug 'vim-airline/vim-airline-themes'                           " Airline themes
+    Plug 'ryanoasis/vim-devicons'                                   " Devicons
+    Plug 'arcticicestudio/nord-vim'                                 " Nord theme
+    " Plug 'morhetz/gruvbox'
+    Plug 'thaerkh/vim-indentguides'                                 " Indent Guides
+    Plug 'epilande/vim-react-snippets'                              " React snippets
+    Plug 'tellijo/vim-react-native-snippets'                        " React Native snippets
+    Plug 'airblade/vim-gitgutter'                                   " Gitgutter
+    Plug 'xuyuanp/nerdtree-git-plugin'                              " Nerdtree git plugin
+    Plug 'mattn/emmet-vim'                                          " Emmet
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }             " FZF
+    Plug 'junegunn/fzf.vim'                                         " FZF
+    Plug 'omnisharp/omnisharp-vim'                                  " Omnisharp
+    Plug 'airblade/vim-rooter'                                      " Rooter
+    
+    Plug 'neovim/nvim-lspconfig'                                    " LSP Config
+    Plug 'kabouzeid/nvim-lspinstall'                                " LSP Install
+    Plug 'hrsh7th/cmp-nvim-lsp'                                     " LSP CMP dependency
+    Plug 'hrsh7th/cmp-buffer'                                       " LSP CMP dependency
+    Plug 'hrsh7th/nvim-cmp'                                         " LSP CMP
+    Plug 'hrsh7th/cmp-vsnip'                                        " LSP CMP vsnip
+    Plug 'hrsh7th/vim-vsnip'                                        " LSP Vin csnip
+    Plug 'folke/lsp-colors.nvim'                                    " LSP Colors
+    Plug 'onsails/lspkind-nvim'                                     " LSP Kind
+    Plug 'glepnir/lspsaga.nvim'                                     " LspSaga
+    Plug 'preservim/nerdtree'                                       " Nerdtree
+    Plug 'tpope/vim-surround'                                       " Surround
+    Plug 'tpope/vim-fugitive'                                       " Fugitive
+    Plug 'APZelos/blamer.nvim'                                      " Git Blamer
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }          " Prettier
+    Plug 'nvim-lua/plenary.nvim'                                    " Plenary
+    Plug 'nvim-lua/popup.nvim'                                      " Popup
+    Plug 'ThePrimeagen/harpoon'                                     " Harpoon 
+    Plug 'nvim-telescope/telescope.nvim'                            " Telescope
+    Plug 'ThePrimeagen/vim-be-good'
+    Plug 'sotte/presenting.vim'                                     " Presenting
 call plug#end()

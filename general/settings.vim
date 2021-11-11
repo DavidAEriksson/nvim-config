@@ -1,15 +1,10 @@
 set path+=**
-
+set shell=/bin/zsh
 set wildignore+=**/.git/
 set wildignore+=**/node_modules/
 
 " Set leader key to space.
 let g:mapleader = "\<Space>"
-
-" CoC
-:nnoremap <leader>e :CocCommand explorer<CR>
-
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -49,10 +44,28 @@ set autochdir                           " Your working directory will always be 
 set noswapfile
 set nohlsearch
 set incsearch
-
+set completeopt=menu,menuone,noselect
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro " Stop newline continution of comments
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
 cmap w!! w !sudo tee % 
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+" Git lens
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+
+" F# Filetypes
+autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp
+
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
 
