@@ -8,7 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'github/copilot.vim'                                       " Copilot
-    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " Treesitter
+    Plug 'nvim-treesitter/playground'                               " Treesitter Playground
     Plug 'sheerun/vim-polyglot'                                     " Better Syntax Support
     Plug 'jiangmiao/auto-pairs'                                     " Auto pairs for '(' '[' '{'
     Plug 'vim-airline/vim-airline'                                  " Airline 
@@ -48,4 +49,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'                            " Telescope
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'sotte/presenting.vim'                                     " Presenting
+    Plug 'tjdevries/nlua.nvim'                                      " Lua autocomplete
+
 call plug#end()

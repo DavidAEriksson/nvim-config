@@ -68,4 +68,6 @@ autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-
+" Treesitter folding
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
