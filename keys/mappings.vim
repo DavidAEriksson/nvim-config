@@ -39,11 +39,6 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da"
 
-" FZF
-"nnoremap <silent> <C-f> :Files<CR>
-"nnoremap <silent> <S-f> :GFiles<CR>
-"nnoremap <silent> <C-b> :Buffers<CR>
-
 " RipGrep
 nnoremap <leader>rg :Rg<CR>
 
