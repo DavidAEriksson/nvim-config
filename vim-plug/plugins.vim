@@ -10,13 +10,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'github/copilot.vim'                                       " Copilot
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}     " Treesitter
     Plug 'nvim-treesitter/playground'                               " Treesitter Playground
-    Plug 'sheerun/vim-polyglot'                                     " Better Syntax Support
     Plug 'jiangmiao/auto-pairs'                                     " Auto pairs for '(' '[' '{'
     Plug 'vim-airline/vim-airline'                                  " Airline 
     Plug 'vim-airline/vim-airline-themes'                           " Airline themes
     Plug 'ryanoasis/vim-devicons'                                   " Devicons
+    Plug 'sainnhe/everforest'                                       " Everforest
     Plug 'arcticicestudio/nord-vim'                                 " Nord theme
-    " Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
     Plug 'thaerkh/vim-indentguides'                                 " Indent Guides
     Plug 'epilande/vim-react-snippets'                              " React snippets
     Plug 'tellijo/vim-react-native-snippets'                        " React Native snippets
@@ -27,7 +27,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'                                         " FZF
     Plug 'omnisharp/omnisharp-vim'                                  " Omnisharp
     Plug 'airblade/vim-rooter'                                      " Rooter
-    
     Plug 'neovim/nvim-lspconfig'                                    " LSP Config
     Plug 'kabouzeid/nvim-lspinstall'                                " LSP Install
     Plug 'hrsh7th/cmp-nvim-lsp'                                     " LSP CMP dependency

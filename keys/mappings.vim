@@ -97,3 +97,6 @@ nnoremap <leader>otf <cmd>:OmniSharpRunTestsInFile<CR>
 " Copilot
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+
+" Terminal
+nnoremap <leader>ter <cmd>:terminal<CR>
