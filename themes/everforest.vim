@@ -6,3 +6,4 @@ let g:everforest_background = 'hard'
 if (has("termguicolors"))
     set termguicolors
 endif
+highlight CopilotSuggestion guifg=#d39bb6 ctermfg=8

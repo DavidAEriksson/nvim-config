@@ -45,6 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/plenary.nvim'                                    " Plenary
     Plug 'nvim-lua/popup.nvim'                                      " Popup
     Plug 'ThePrimeagen/harpoon'                                     " Harpoon 
+    Plug 'ThePrimeagen/refactoring.nvim'                            " Refactoring
     Plug 'nvim-telescope/telescope.nvim'                            " Telescope
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'sotte/presenting.vim'                                     " Presenting

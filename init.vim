@@ -3,5 +3,6 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/everforest.vim
 source $HOME/.config/nvim/themes/airline.vim
-source $HOME/.config/nvim/lsp/lsp.lua
+source $HOME/.config/nvim/lua/lsp.lua
+"source $HOME/.config/nvim/lua/refactor.lua
 "source $HOME/.config/nvim/lsp/treesitter.lua
