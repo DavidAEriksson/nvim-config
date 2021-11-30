@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'omnisharp/omnisharp-vim'                                  " Omnisharp
     Plug 'airblade/vim-rooter'                                      " Rooter
     Plug 'neovim/nvim-lspconfig'                                    " LSP Config
-    Plug 'kabouzeid/nvim-lspinstall'                                " LSP Install
+    Plug 'williamboman/nvim-lsp-installer'                          " LSP Install
     Plug 'hrsh7th/cmp-nvim-lsp'                                     " LSP CMP dependency
     Plug 'hrsh7th/cmp-buffer'                                       " LSP CMP dependency
     Plug 'hrsh7th/nvim-cmp'                                         " LSP CMP
