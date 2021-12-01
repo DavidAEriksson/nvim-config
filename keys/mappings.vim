@@ -95,3 +95,11 @@ let g:copilot_no_tab_map = v:true
 
 " Terminal
 nnoremap <leader>ter <cmd>:terminal<CR>
+
+" Trouble!
+nnoremap <leader>tt <cmd>TroubleToggle<cr>
+nnoremap <leader>tw <cmd>TroubleToggle lsp_workspace_diagnostics<cr>
+nnoremap <leader>td <cmd>TroubleToggle lsp_document_diagnostics<cr>
+nnoremap <leader>tq <cmd>TroubleToggle quickfix<cr>
+nnoremap <leader>tl <cmd>TroubleToggle loclist<cr>
+nnoremap gR <cmd>TroubleToggle lsp_references<cr>
