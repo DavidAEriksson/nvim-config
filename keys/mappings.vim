@@ -39,6 +39,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da"
 
+nnoremap <Leader>ww <cmd>bufdo w<CR>
+
 " RipGrep
 nnoremap <leader>rg :Rg<CR>
 
