@@ -50,10 +50,29 @@ nnoremap <C-p> :Prettier<CR>
 " BEHAVE LIKE THE REST OF <C-u>
 nnoremap Y y$
 
-" ZZ TOP
+" ZZ TOP MORE LIKE ZZ CENTER
 nnoremap n nzzzv
 nnoremap N nzzzv
 nnoremap J mzJ`z
+
+" Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ( (<c-g>u
+inoremap ) )<c-g>u
+inoremap [ [<c-g>u
+inoremap ] ]<c-g>u
+inoremap { {<c-g>u
+inoremap } }<c-g>u
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
 
 " LSP
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
