@@ -18,7 +18,7 @@ require'nvim-treesitter.configs'.setup {
       toggle_hl_groups = 'i',
       toggle_injected_languages = 't',
       toggle_anonymous_nodes = 'a',
-      toggle_language_display = 'I',
+     toggle_language_display = 'I',
       focus_language = 'f',
       unfocus_language = 'F',
       update = 'R',
@@ -26,4 +26,4 @@ require'nvim-treesitter.configs'.setup {
       show_help = '?',
     },
   }
-}
+} 

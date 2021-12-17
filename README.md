@@ -1,14 +1,10 @@
-# Neovim Config
+# Neovim Lua Config
 
-This is my *smaller* version of Christian Chiarulli's Neovim configuration where he uses a more sane approach to the traditional ```vimrc``` using the ```init.vim``` file to source plugins.
-
-Link to Christian: https://github.com/ChristianChiarulli/nvim
+![Config Screenshot](./config_screenshot.png)
 
 ## Installation
 
-### Prerequisites
-
-#### Install Neovim
+### Install Neovim (0.6+ required for Native LSP support and GitHub Copilot)
 
 - Mac
 
@@ -16,60 +12,45 @@ Link to Christian: https://github.com/ChristianChiarulli/nvim
 brew install neovim
 ```
 
-- Ubuntu
+- Linux
 
 ```
 sudo apt install neovim
 ```
 
-- Arch
-
-```
-sudo apt install neovim
-```
-
-### Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
+#### Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
 
 ```
 mkdir ~/.config/nvim
 ```
 
-### Clone this repository 
+#### Clone this repository 
 
-This will clone the repository directly into your ```nvim config``` folder
+This will clone the repository directly into your ```nvim config``` folder:
 ```
 git clone https://github.com/DavidAEriksson/nvim-config.git ~/.config/nvim
 ```
 
-### Install libraries
+### Package manager
 
-- Node
+The config uses Packer as the package manager. All installed packages can be found in `lua/packages.lua`. On clone you need to run `:PackerInstall` to install all dependencies.
 
-```
-npm i -g neovim
-```
-
-- Python
+GitHub Copilot should be installed directly:
 
 ```
-pip install pynvim
+git clone https://github.com/github/copilot.vim.git \
+  ~/.config/nvim/pack/github/start/copilot.vim
 ```
 
-- Neovim Remote
+### Install language servers (LSP)
+
+Additional language servers can be installed through `nvim-lsp-installer` and invoking `LspInstall <server>`. In `lua/lsp.lua` servers are dynamically handled through this block of Lua script:
 
 ```
-pip install neovim-remote
-```
-### Install vim-plug libraries
-
-Firstly, launch Neovim
-
-```
-nvim
-```
-
-Then install using PlugInstall
-
-```
-:PlugInstall
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities = capabilities
+    server:setup(opts)
+end)
 ```

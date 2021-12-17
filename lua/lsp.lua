@@ -7,10 +7,19 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
 end)
 
+--require'lspconfig'.tsserver.setup{
+--	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+--  root_dir = function() return vim.loop.cwd() end
+--
+--}
+--
+--require'lspconfig'.omnisharp.setup{
+--		root_dir = function() return vim.loop.cwd() end
+--}
+
 local lsp = vim.lsp
 local handlers = lsp.handlers
 
--- Hover doc popup
 local pop_opts = { border = "rounded", max_width = 80 }
 handlers["textDocument/hover"] = lsp.with(handlers.hover, pop_opts)
 handlers["textDocument/signatureHelp"] = lsp.with(handlers.signature_help, pop_opts)
@@ -31,7 +40,6 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
     ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
-
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -39,7 +47,7 @@ cmp.setup({
   }, {
     { name = 'buffer' },
   }),
-formatting = {
-  format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-}
+	formatting = {
+		format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+	}
 })
