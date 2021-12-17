@@ -7,16 +7,6 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
 end)
 
---require'lspconfig'.tsserver.setup{
---	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
---  root_dir = function() return vim.loop.cwd() end
---
---}
---
---require'lspconfig'.omnisharp.setup{
---		root_dir = function() return vim.loop.cwd() end
---}
-
 local lsp = vim.lsp
 local handlers = lsp.handlers
 

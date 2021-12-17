@@ -47,7 +47,7 @@ vim.g.nowrap = true
 -- Windows
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.showtabline = 1
+vim.o.showtabline = 2
 
 -- Colors
 vim.o.background = 'dark'
@@ -56,8 +56,8 @@ vim.cmd([[
 ]])
 vim.o.colorcolumn = '120'
 vim.g.t_Co = '256'
-vim.g.substrata_italic_functions = true
-vim.cmd [[colorscheme substrata]]
+-- vim.g.substrata_italic_functions = true
+vim.cmd [[colorscheme nord]]
 
 
 -- Cursor

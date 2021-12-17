@@ -4,6 +4,7 @@ return require('packer').startup(function()
 	
 	-- Themes
 	use 'kvrohit/substrata.nvim'
+	use 'shaunsingh/nord.nvim'
 
 	-- LSP
 	use 'neovim/nvim-lspconfig'
@@ -19,7 +20,14 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim' 
 	
 	-- Trouble
-	use 'folke/trouble.nvim'
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {
+			}
+		end
+	}
 	
 	-- Indentation lines and auto pairs
 	use 'thaerkh/vim-indentguides'
@@ -39,10 +47,6 @@ return require('packer').startup(function()
 	-- NerdTree
 	use 'preservim/nerdtree'
 
-	-- Airline
-	use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes' 
-
 	-- Refactoring
 	use {
 		"ThePrimeagen/refactoring.nvim",
@@ -54,4 +58,12 @@ return require('packer').startup(function()
 	
 	-- Devicons
 	use 'kyazdani42/nvim-web-devicons'
+	use 'ryanoasis/vim-devicons'
+
+	-- Lualine Status Line
+	use {
+  	'nvim-lualine/lualine.nvim',
+  	requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
+
 end)

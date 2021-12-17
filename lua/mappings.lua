@@ -29,8 +29,8 @@ imap('jk', '<Esc>')
 imap('kj', '<Esc>')
 
 -- Tab to next S-Tab to prev buf
-nmap('<TAB>', ':bnext')
-nmap('<S-TAB>', ':bprevious')
+nmap('<TAB>', ':bnext<CR>')
+nmap('<S-TAB>', ':bprevious<CR>')
 
 -- Visual mode tabbing
 vmap('<', '<gv')
