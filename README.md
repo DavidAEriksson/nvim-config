@@ -4,7 +4,7 @@
 
 ## Installation
 
-### Install Neovim (0.6+ required for Native LSP support and GitHub Copilot)
+### Install Neovim (0.6+ required for Native LSP support, Treesitter and GitHub Copilot)
 
 - Mac
 
