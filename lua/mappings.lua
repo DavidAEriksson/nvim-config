@@ -27,10 +27,12 @@ end
 -- I hate escape more than anything else
 imap('jk', '<Esc>')
 imap('kj', '<Esc>')
+nmap('<leader>q', '<Esc>')
 
 -- Tab to next S-Tab to prev buf
 nmap('<TAB>', ':bnext<CR>')
 nmap('<S-TAB>', ':bprevious<CR>')
+nmap('<leader>bd', ':bd<CR>')
 
 -- Visual mode tabbing
 vmap('<', '<gv')
@@ -89,7 +91,7 @@ nmap('<leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
 
 -- Harpoon
 nmap('<leader>ha', "<cmd> lua require('harpoon.mark').add_file()<CR>")
-nmap('<leader>htm', "<cmd> lua require('harpoon.mark').toggle_quick_menu()<CR>")
+nmap('<leader>hm', "<cmd> lua require('harpoon.ui').toggle_quick_menu()<CR>")
 nmap('<leader>h1', "<cmd> lua require('harpoon.ui').nav_file(1)<CR>")
 nmap('<leader>h2', "<cmd> lua require('harpoon.ui').nav_file(2)<CR>")
 nmap('<leader>h3', "<cmd> lua require('harpoon.ui').nav_file(3)<CR>")
@@ -115,12 +117,12 @@ vim.cmd([[
 ]])
 
 -- Terminal
-nmap('<leader>ter', '<cmd>:terminal<CR>')
+nmap('<leader>ter', '<cmd>:FloatermNew<CR>')
 
 -- Trouble in paradize
 nmap('<leader>tt', '<cmd>TroubleToggle<CR>')
 nmap('<leader>tw', '<cmd>TroubleToggle lsp_workspace_diagnostics<CR>')
-nmap('<leader>td', '<cmd>TroubleToggle lsp_document_diagnostics<CR>')
+nmap('<leader>ttd', '<cmd>TroubleToggle lsp_document_diagnostics<CR>')
 nmap('<leader>tq', '<cmd>TroubleToggle quickfix<CR>')
 nmap('<leader>tl', '<cmd>TroubleToggle loclist<CR>')
 nmap('gR', '<cmd>TroubleToggle lsp_references<CR>')

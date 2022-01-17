@@ -1,10 +1,15 @@
 return require('packer').startup(function()
 	-- Packer
 	use 'wbthomason/packer.nvim'
-	
+
 	-- Themes
 	use 'kvrohit/substrata.nvim'
 	use 'shaunsingh/nord.nvim'
+	use "rebelot/kanagawa.nvim"
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+  })
 
 	-- LSP
 	use 'neovim/nvim-lspconfig'
@@ -17,8 +22,8 @@ return require('packer').startup(function()
 	use 'folke/lsp-colors.nvim'
 	use 'onsails/lspkind-nvim'
 	use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim' 
-	
+  use 'nvim-lua/popup.nvim'
+
 	-- Trouble
 	use {
 		"folke/trouble.nvim",
@@ -28,7 +33,7 @@ return require('packer').startup(function()
 			}
 		end
 	}
-	
+
 	-- Indentation lines and auto pairs
 	use 'thaerkh/vim-indentguides'
 	use 'jiangmiao/auto-pairs'
@@ -44,6 +49,9 @@ return require('packer').startup(function()
 	use 'airblade/vim-gitgutter'
 	use 'APZelos/blamer.nvim'
 
+	-- Rooter
+	use 'airblade/vim-rooter'
+
 	-- NerdTree
 	use 'preservim/nerdtree'
 
@@ -55,7 +63,9 @@ return require('packer').startup(function()
         		{"nvim-treesitter/nvim-treesitter"}
     		}
 	}
-	
+  -- Harpoon
+  use 'ThePrimeagen/harpoon'
+
 	-- Devicons
 	use 'kyazdani42/nvim-web-devicons'
 	use 'ryanoasis/vim-devicons'
@@ -65,5 +75,25 @@ return require('packer').startup(function()
   	'nvim-lualine/lualine.nvim',
   	requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
+	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
+	-- Lua for Neovim completion
+	use 'tjdevries/nlua.nvim'
+
+	use {
+		'prettier/vim-prettier',
+		run = 'yarn install',
+	}
+
+	-- Floating termingal
+	use 'voldikss/vim-floaterm'
+	
+	-- Alpha welcome screen
+	use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.opts)
+    end
+}
 end)

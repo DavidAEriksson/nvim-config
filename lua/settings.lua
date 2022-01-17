@@ -10,13 +10,17 @@ vim.cmd([[
 vim.g.mapleader = " "
 
 -- Default settings
-vim.o.backspace = 'indent,eol,start' 
+vim.o.backspace = 'indent,eol,start'
 vim.o.completeopt = 'menu,menuone,noselect'
 vim.o.startofline = true
 vim.o.autochdir = true
 vim.o.updatetime = 100
 vim.o.timeoutlen = 500
 vim.o.clipboard = 'unnamedplus'
+vim.o.hidden = true
+vim.cmd([[
+	set nowrap
+]])
 
 -- Encoding
 vim.o.encoding = 'UTF-8'
@@ -26,7 +30,6 @@ vim.o.fileencoding = 'UTF-8'
 vim.cmd([[
 	set formatoptions-=cro
 ]])
-
 
 -- Sidebar and numbers
 vim.o.number = true
@@ -38,6 +41,7 @@ vim.o.relativenumber = true
 
 -- Tabs and whitespace
 vim.o.tabstop = 2
+vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
@@ -47,17 +51,14 @@ vim.g.nowrap = true
 -- Windows
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.showtabline = 2
+vim.o.showtabline = 1
 
 -- Colors
 vim.o.background = 'dark'
-vim.cmd([[
-	syntax enable
-]])
 vim.o.colorcolumn = '120'
 vim.g.t_Co = '256'
 -- vim.g.substrata_italic_functions = true
-vim.cmd [[colorscheme nord]]
+vim.cmd [[colorscheme rose-pine]]
 
 
 -- Cursor
@@ -66,10 +67,16 @@ vim.o.cursorline = true
 
 -- Backups
 vim.g.noswapfile = true
+vim.o.swapfile = false
 
 -- Search
-vim.g.nohlsearch = true
+vim.cmd [[set nohlsearch]]
 vim.g.incsearch = true
 
 -- Statusline
 vim.o.laststatus = 1
+
+vim.cmd([[
+	let g:prettier#autoformat = 1
+	let g:prettier#autoformat_require_pragma = 0
+]])
