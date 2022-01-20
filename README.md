@@ -18,15 +18,16 @@ brew install neovim
 sudo apt install neovim
 ```
 
-#### Make sure that the folder ```nvim``` exists within your ```~/.config``` directory before proceeding, if not, create it:
+#### Make sure that the folder `nvim` exists within your `~/.config` directory before proceeding, if not, create it:
 
 ```
 mkdir ~/.config/nvim
 ```
 
-#### Clone this repository 
+#### Clone this repository
 
-This will clone the repository directly into your ```nvim config``` folder:
+This will clone the repository directly into your `nvim config` folder:
+
 ```
 git clone https://github.com/DavidAEriksson/nvim-config.git ~/.config/nvim
 ```
@@ -48,9 +49,6 @@ Additional language servers can be installed through `nvim-lsp-installer` and in
 
 ```
 lsp_installer.on_server_ready(function(server)
-    local opts = {}
-    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    capabilities = capabilities
-    server:setup(opts)
+  ...
 end)
 ```
