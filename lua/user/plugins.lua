@@ -23,10 +23,9 @@ return require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-nvim-lsp'
   use "hrsh7th/cmp-nvim-lua"
-  
   -- Snippets
-  use "L3MON4D3/LuaSnip" 
-  use "rafamadriz/friendly-snippets" 
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
 
   -- LSP
 	use 'neovim/nvim-lspconfig'
@@ -122,7 +121,6 @@ return require('packer').startup(function()
     }
     end
   }
-
   -- Todo Comments
   use {
     "folke/todo-comments.nvim",
@@ -133,5 +131,9 @@ return require('packer').startup(function()
       }
     end
   }
+
+  -- Commenting
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
 end)
