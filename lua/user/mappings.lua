@@ -75,20 +75,6 @@ imap('C-k', '<esc>:m .-2<CR>==')
 nmap('<leader>j', '<esc>:m .+1<CR>==')
 nmap('<leader>k', '<esc>:m .-2<CR>==')
 
--- LSP
-nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-nmap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-nmap('<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-nmap('<C-n>', '<cmd>lua vim.lsp.buf.diagnostic.goto_prev()<CR>')
-nmap('<C-p>', '<cmd>lua vim.lsp.buf.diagnostic.goto_next()<CR>')
-nmap('<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>')
-nmap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-nmap('<leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
-
 -- Harpoon
 nmap('<leader>ha', "<cmd> lua require('harpoon.mark').add_file()<CR>")
 nmap('<leader>hm', "<cmd> lua require('harpoon.ui').toggle_quick_menu()<CR>")
@@ -126,3 +112,9 @@ nmap('<leader>ttd', '<cmd>TroubleToggle lsp_document_diagnostics<CR>')
 nmap('<leader>tq', '<cmd>TroubleToggle quickfix<CR>')
 nmap('<leader>tl', '<cmd>TroubleToggle loclist<CR>')
 nmap('gR', '<cmd>TroubleToggle lsp_references<CR>')
+
+-- Zen
+nmap('<leader>z', '<cmd>ZenMode<CR>')
+
+-- Cheat.nvim
+nmap('<leader>sh', '<cmd>lua require("cheat").window()<CR>')

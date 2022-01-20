@@ -1,7 +1,11 @@
 return require('packer').startup(function()
+  -- Cheat.sh
+  -- use 'DavidAEriksson/cheat.nvim'
 	-- Packer
 	use 'wbthomason/packer.nvim'
 
+  -- Lua dev
+  use "folke/lua-dev.nvim"
 	-- Themes
 	use 'kvrohit/substrata.nvim'
 	use 'shaunsingh/nord.nvim'
@@ -11,18 +15,27 @@ return require('packer').startup(function()
     as = 'rose-pine',
   })
 
-	-- LSP
+	-- CMP
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use "hrsh7th/cmp-nvim-lua"
+  
+  -- Snippets
+  use "L3MON4D3/LuaSnip" 
+  use "rafamadriz/friendly-snippets" 
+
+  -- LSP
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-vsnip'
-	use 'hrsh7th/vim-vsnip'
-	use 'folke/lsp-colors.nvim'
-	use 'onsails/lspkind-nvim'
+
+  -- NLUA
 	use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
+
 
 	-- Trouble
 	use {
@@ -95,5 +108,30 @@ return require('packer').startup(function()
     config = function ()
         require'alpha'.setup(require'alpha.themes.startify'.opts)
     end
-}
+  }
+  use {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {
+        plugins = {
+          kitty = {
+            enabled = true,
+            font = "+4",
+          },
+        },
+    }
+    end
+  }
+
+  -- Todo Comments
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- Custom config can be defined here
+      }
+    end
+  }
+
 end)
