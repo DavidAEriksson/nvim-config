@@ -1,26 +1,26 @@
 vim.cmd('noremap <C-b> :noh<cr>:call clearmatches()<cr>') -- clear matches Ctrl+b
 
-function map(mode, shortcut, command)
+local function map(mode, shortcut, command)
   vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 end
 
-function nmap(shortcut, command)
+local function nmap(shortcut, command)
   map('n', shortcut, command)
 end
 
-function imap(shortcut, command)
+local function imap(shortcut, command)
   map('i', shortcut, command)
 end
 
-function vmap(shortcut, command)
+local function vmap(shortcut, command)
   map('v', shortcut, command)
 end
 
-function cmap(shortcut, command)
+local function cmap(shortcut, command)
   map('c', shortcut, command)
 end
 
-function tmap(shortcut, command)
+local function tmap(shortcut, command)
   map('t', shortcut, command)
 end
 
@@ -50,6 +50,9 @@ nmap('<Leader>ww', '<cmd>bufdo w<CR>')
 -- Behave like the rest of us Y
 nmap('Y', 'y$')
 
+-- Yank function
+nmap('<leader>yf', 'y<S-V>a<S-B><CR>')
+
 -- Don't send me flying
 nmap('n', 'nzzzv')
 nmap('N', 'nzzzv')
@@ -70,8 +73,6 @@ imap('}', '}<c-g>')
 -- Move all the text (:
 vmap('J', ":m '>+1<CR>gv=gv")
 vmap('K', ":m '<-2<CR>gv=gv")
-imap('C-j', '<esc>:m .+1<CR>==')
-imap('C-k', '<esc>:m .-2<CR>==')
 nmap('<leader>j', '<esc>:m .+1<CR>==')
 nmap('<leader>k', '<esc>:m .-2<CR>==')
 
@@ -84,23 +85,19 @@ nmap('<leader>h3', "<cmd> lua require('harpoon.ui').nav_file(3)<CR>")
 nmap('<leader>h4', "<cmd> lua require('harpoon.ui').nav_file(4)<CR>")
 
 -- NerdTree
-nmap('<leader>e', ':NERDTreeToggle<CR>')
+nmap('<leader>e', ':NvimTreeToggle<CR>')
 
 -- Telescope
-nmap('<S-f>', ':Telescope find_files<CR>')
+nmap('<S-f>', ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ winblend = 10, layout_config = { width = 0.7, height = 0.6 } }))<CR>")
 nmap('<leader>rg', ':Telescope live_grep<CR>')
 nmap('<leader>fb', ':Telescope buffers<CR>')
 nmap('<leader>fh', ':Telescope help_tags<CR>')
+nmap('<leader>wt', ':lua require("telescope").extensions.git_worktree.git_worktrees()<CR>')
+nmap('<leader>cw', ':lua require("telescope").extensions.git_worktree.create_git_worktree()<CR>')
 
 -- Omnisharp tests
 nmap('<leader>ot',':OmniSharpRunTest<CR>')
 nmap('<leader>otf',':OmniSharpRunTestsInFile<CR>')
-
--- Copilot
-vim.cmd([[
-	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-	let g:copilot_no_tab_map = v:true
-]])
 
 -- Terminal
 nmap('<leader>ter', '<cmd>:FloatermNew<CR>')
@@ -117,4 +114,9 @@ nmap('gR', '<cmd>TroubleToggle lsp_references<CR>')
 nmap('<leader>z', '<cmd>ZenMode<CR>')
 
 -- Cheat.nvim
-nmap('<leader>sh', '<cmd>lua require("cheat").window()<CR>')
+nmap('<leader>sh', '<cmd>lua require("cheat.entry").query()<CR>')
+
+vim.cmd([[
+  imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+  let g:copilot_no_tab_map = v:true
+]])

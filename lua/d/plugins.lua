@@ -1,11 +1,13 @@
-return require('packer').startup(function()
+return require('packer').startup({function()
   -- Cheat.sh
   -- use 'DavidAEriksson/cheat.nvim'
 	-- Packer
 	use 'wbthomason/packer.nvim'
-
+  -- Copilot.vim
+  use 'github/copilot.vim'
   -- Lua dev
   use "folke/lua-dev.nvim"
+
 	-- Themes
 	use 'kvrohit/substrata.nvim'
 	use 'shaunsingh/nord.nvim'
@@ -14,8 +16,28 @@ return require('packer').startup(function()
     'rose-pine/neovim',
     as = 'rose-pine',
   })
+  use "sainnhe/gruvbox-material"
+  use "sainnhe/everforest"
+  use 'EdenEast/nightfox.nvim'
 
-	-- CMP
+  use({
+    "themercorp/themer.lua",
+    config = function()
+      require("themer").setup({
+        colorscheme = "kanagawa",
+        styles = {
+          comment = { style = 'italic' },
+            ["function"] = { style = 'italic' },
+            functionbuiltin = { style = 'italic' },
+            variable = { style = 'italic' },
+            variableBuiltIn = { style = 'italic' },
+            parameter  = { style = 'italic' },
+        },
+      })
+    end
+  })
+
+  -- CMP
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -23,6 +45,8 @@ return require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-nvim-lsp'
   use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lsp-signature-help"
+
   -- Snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
@@ -34,7 +58,6 @@ return require('packer').startup(function()
   -- NLUA
 	use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
-
 
 	-- Trouble
 	use {
@@ -55,6 +78,7 @@ return require('packer').startup(function()
 
 	-- Telescope
 	use 'nvim-telescope/telescope.nvim'
+  use 'ThePrimeagen/git-worktree.nvim'
 
 	-- GIT
 	use 'tpope/vim-fugitive'
@@ -64,8 +88,13 @@ return require('packer').startup(function()
 	-- Rooter
 	use 'airblade/vim-rooter'
 
-	-- NerdTree
-	use 'preservim/nerdtree'
+  -- NvimTree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+  }
 
 	-- Refactoring
 	use {
@@ -99,7 +128,7 @@ return require('packer').startup(function()
 
 	-- Floating termingal
 	use 'voldikss/vim-floaterm'
-	
+
 	-- Alpha welcome screen
 	use {
     'goolord/alpha-nvim',
@@ -136,4 +165,29 @@ return require('packer').startup(function()
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-end)
+  -- Debugging
+  -- use 'puremourning/vimspector'
+
+  -- Blamer
+  use 'f-person/git-blame.nvim'
+
+  -- Dim
+  use {
+    "narutoxy/dim.lua",
+    requires = { "nvim-treesitter/nvim-treesitter", "neovim/nvim-lspconfig" },
+    config = function()
+      require('dim').setup({})
+    end
+  }
+
+  -- DoGe
+  use "kkoomen/vim-doge"
+end,
+config = {
+  display = {
+    open_fn = function ()
+      return require('packer.util').float({ border = 'single' })
+    end
+  }
+}
+})
